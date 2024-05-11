@@ -16,6 +16,9 @@ target/
 build/
 out/
 
+# Gradle関連ファイルの無視
+.gradle/
+
 # IntelliJ IDEAのプロジェクトファイル
 .idea/
 *.iml

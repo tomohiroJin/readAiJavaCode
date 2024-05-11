@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '21'  // Javaのバージョンを指定
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit Jupiter APIとEngineをテストスコープで依存関係に追加
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    // JUnit Platformを使用するように設定
+    useJUnitPlatform()
+}

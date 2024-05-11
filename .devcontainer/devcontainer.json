@@ -4,24 +4,47 @@
 	"name": "Java",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
-
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
 			"installMaven": "false",
 			"installGradle": "false"
 		}
-	}
-
+	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
-
+	"postCreateCommand": "/bin/bash -c 'source /usr/local/sdkman/bin/sdkman-init.sh && sdk install gradle'",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"vmware.vscode-spring-boot",
+				"vscjava.vscode-spring-initializr",
+				"vscjava.vscode-spring-boot-dashboard",
+				"vmware.vscode-boot-dev-pack",
+				"vscjava.vscode-java-test",
+				"vscjava.vscode-maven",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-java-dependency",
+				"shengchen.vscode-checkstyle",
+				"vscjava.vscode-lombok",
+				"eamodio.gitlens",
+				"alefragnani.project-manager",
+				"christian-kohler.path-intellisense",
+				"ionutvmi.path-autocomplete",
+				"CoenraadS.bracket-pair-colorizer-2",
+				"esbenp.prettier-vscode",
+				"ms-azuretools.vscode-docker",
+				"humao.rest-client",
+				"streetsidesoftware.code-spell-checker",
+				"wayou.vscode-todo-highlight",
+				"vscjava.vscode-gradle"
+			]
+		}
+	}
 	// Configure tool-specific properties.
 	// "customizations": {},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }

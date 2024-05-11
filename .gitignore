@@ -1,0 +1,40 @@
+# コンパイルされたクラスファイル
+*.class
+
+# パッケージングされたJARとWARファイル
+*.jar
+*.war
+*.ear
+
+# ログファイル
+*.log
+
+# Maven 生成ファイル
+target/
+
+# Gradle 生成ファイル
+build/
+out/
+
+# IntelliJ IDEAのプロジェクトファイル
+.idea/
+*.iml
+*.iws
+
+# Eclipseのプロジェクトファイル
+.classpath
+.project
+.settings/
+
+# VSCodeの設定
+.history
+.idea/
+.vscode/
+
+# Mac OSファイルシステム
+.DS_Store
+
+# Tempファイル
+*.tmp
+*.bak
+*.swp
